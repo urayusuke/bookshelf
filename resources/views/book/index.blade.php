@@ -1,6 +1,6 @@
 <html>
   <head>@yield('title')</head>
-  <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </html>
 <body>
   <div class = "header">
