@@ -7,4 +7,10 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-@import 'book/index';
+@import "book/index";
+
+.header{
+  background-color: black;
+  height: 200px;
+  width: 100%;
+}

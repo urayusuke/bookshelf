@@ -1,6 +1,6 @@
 <html>
   <head>@yield('title')</head>
-  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 </html>
 <body>
   <div class = "header">
@@ -13,7 +13,6 @@
                   <a href="{{ url('/home') }}">Home</a>
               @else
                   <a href="{{ route('login') }}">Login</a>
-
                   @if (Route::has('register'))
                       <a href="{{ route('register') }}">Register</a>
                   @endif
