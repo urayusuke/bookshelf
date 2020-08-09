@@ -21,10 +21,23 @@ html, body {
   position: relative;
 }
 
+.header{
+  background-color: brown;
+  height: 15vh;
+  width: 100vw;
+  color: wheat;
+}
+
+h1{
+  position: absolute;
+  left: 2%;
+}
+
 .top-right {
   position: absolute;
   right: 10px;
-  top: 18px;
+  top: -11%;
+  // top: 18px;
 }
 
 .content {
@@ -38,11 +51,12 @@ html, body {
 .links > a {
   color: #636b6f;
   padding: 0 25px;
-  font-size: 13px;
+  font-size: 20px;
   font-weight: 600;
   letter-spacing: .1rem;
   text-decoration: none;
   text-transform: uppercase;
+  color: wheat;
 }
 
 .m-b-md {

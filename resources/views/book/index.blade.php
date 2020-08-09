@@ -1,6 +1,6 @@
 <html>
   <head>@yield('title')</head>
-  <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+  <link href="{{ asset('/scss/book/index.scss') }}" rel="stylesheet">
 </html>
 <body>
   <div class = "header">
@@ -19,12 +19,11 @@
               @endauth
           </div>
       @endif
-    <div class="content">
-      <ul>
-        <li></li>
-      </ul>
-    </div>
-  </body>
+  <div class="content">
+    <ul>
+      <li></li>
+    </ul>
+  </div>
   <div class="footer">
     <h3>bookshelf</h3>
   </div>
