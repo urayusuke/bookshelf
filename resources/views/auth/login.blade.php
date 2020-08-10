@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('book.index')
 
 @section('content')
 <div class="container">
@@ -71,3 +71,4 @@
     </div>
 </div>
 @endsection
+

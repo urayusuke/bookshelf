@@ -20,11 +20,13 @@
           </div>
       @endif
   <div class="content">
+    @yield('content')
     <ul>
       <li></li>
     </ul>
   </div>
   <div class="footer">
+    @yield('footer')
     <h3>bookshelf</h3>
   </div>
 </body>

@@ -62,3 +62,25 @@ h1{
 .m-b-md {
   margin-bottom: 30px;
 }
+
+.content{
+  width: 100vw;
+  height: 90vh;
+}
+
+li{
+  list-style: none;
+}
+
+.footer{
+  background-color: gray;
+  width: 100vw;
+  height: 10vh;
+  position: absolute;
+  bottom: 0;
+}
+
+h3{
+  position: absolute;
+  left: 46vw;
+}
