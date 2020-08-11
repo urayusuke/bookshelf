@@ -1,4 +1,4 @@
-@extends('book.index')
+@extends('layouts.app')
 
 @section('content')
 <div class="container">
