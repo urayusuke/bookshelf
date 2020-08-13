@@ -20,7 +20,7 @@
           </div>
       @endif
   <div class="content">
-    {{-- @yield('content') --}}
+    @yield('content')
     <ul>
       <li></li>
     </ul>
