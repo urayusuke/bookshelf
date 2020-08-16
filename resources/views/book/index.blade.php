@@ -3,7 +3,8 @@
   <link href="{{ asset('/scss/book/index.scss') }}" rel="stylesheet">
 </html>
 <body>
-  <div class = "header">
+  @extends('layouts.app')
+  {{-- <div class = "header">
     <h1>bookshelf</h1>
   </div>
     <div class="flex-center position-ref full-height">
@@ -24,9 +25,11 @@
     <ul>
       <li></li>
     </ul>
-  </div>
+  </div> --}}
   <div class="footer">
     @yield('footer')
+    <a href="{{ url('/') }}">
     <h3>bookshelf</h3>
+    </a>
   </div>
 </body>

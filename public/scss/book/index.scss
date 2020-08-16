@@ -21,18 +21,6 @@ html, body {
   position: relative;
 }
 
-.header{
-  background-color: brown;
-  height: 15vh;
-  width: 100vw;
-  color: wheat;
-}
-
-h1{
-  position: absolute;
-  left: 2%;
-}
-
 .top-right {
   position: absolute;
   right: 10px;
@@ -74,6 +62,8 @@ li{
 
 .footer{
   background-color: gray;
+  box-shadow: 0 10px 12px 0 black;
+  color: white;
   width: 100vw;
   height: 10vh;
   position: absolute;
@@ -82,5 +72,6 @@ li{
 
 h3{
   position: absolute;
+  top: 15px;
   left: 46vw;
 }
