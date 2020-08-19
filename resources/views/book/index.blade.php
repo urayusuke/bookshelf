@@ -3,7 +3,7 @@
   <link href="{{ asset('/scss/book/index.scss') }}" rel="stylesheet">
   <style>
     .booksRegistration{text-align: center; font-weight: bold; font-size: 18px;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
     }
   </style>
 </html>
@@ -13,7 +13,7 @@
 @section('content')
   @if (Auth::check())
     <div class="booksRegistration">
-      <a href="/">本を登録する</a>
+      <a href="/book/create">本を登録する</a>
     </div>
   @endif
   <div class="content">
@@ -23,10 +23,5 @@
   </div>
 @endsection
 
-  <div class="footer">
-    @yield('footer')
-    <a href="{{ url('/') }}">
-    <h3>bookshelf</h3>
-    </a>
-  </div>
+@include('book.footer')
 </body>

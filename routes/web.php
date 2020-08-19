@@ -23,4 +23,6 @@ Auth::routes();
 
 Route::get('/book','BooksController@index');
 
+Route::get('/book/create','BooksController@create');
+
 // Route::get('/home', 'HomeController@index')->name('home');
