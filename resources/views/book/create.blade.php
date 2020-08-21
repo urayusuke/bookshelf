@@ -21,11 +21,14 @@
     <h2>本の登録</h2>
   </div>
   <div class="create">
-    <form action="/" method="post">
-      <p>タイトル</p><input type="text" id="title">
-      <br><p>著 者</p><input type="text" id="author">
-      <br><p>内 容</p><textarea id="content" name="content" placeholder="本の内容を記載してください"></textarea>
-      <br><input type="submit" id="btn" value="登録する">
+    <form action="/book/create" method="post">
+      <table>
+        @csrf
+        <p>タイトル</p><input type="text" id="title">
+        <br><p>著 者</p><input type="text" id="author">
+        <br><p>内 容</p><textarea id="content" name="content" placeholder="本の内容を記載してください"></textarea>
+        <br><input type="submit" id="btn" value="登録する">
+      </table>
     </form>
   </div>
 @endsection
