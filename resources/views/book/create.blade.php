@@ -21,12 +21,12 @@
     <h2>本の登録</h2>
   </div>
   <div class="create">
-    <form action="/book/create" method="post">
+  <form action="{{ url('/book/create')}}" method="POST">
       <table>
         @csrf
-        <p>タイトル</p><input type="text" id="title">
-        <br><p>著 者</p><input type="text" id="author">
-        <br><p>内 容</p><textarea id="content" name="content" placeholder="本の内容を記載してください"></textarea>
+        <p>タイトル</p><input type="text" name="title" id="title">
+        <br><p>著 者</p><input type="text" name="author" id="author">
+        <br><p>内 容</p><textarea id="content" name="contents" placeholder="本の内容を記載してください"></textarea>
         <br><input type="submit" id="btn" value="登録する">
       </table>
     </form>

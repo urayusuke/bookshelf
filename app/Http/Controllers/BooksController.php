@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Laravel\Ui\Presets\React;
+use App\book;
 
 class BooksController extends Controller
 {
@@ -21,9 +23,8 @@ class BooksController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        
         return view('book.create');
     }
 
@@ -34,8 +35,11 @@ class BooksController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
+    { 
+        $this->validate($request, Book::$rules);
+
+        $book = new Book();
+        $book->fill($request->all())->save();
     }
 
     /**
