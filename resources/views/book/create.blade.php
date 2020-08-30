@@ -21,7 +21,7 @@
     <h2>本の登録</h2>
   </div>
   <div class="create">
-  <form action="{{ url('/book/create')}}" method="POST">
+  <form action="{{ route('store') }}" method="POST">
       <table>
         @csrf
         <p>タイトル</p><input type="text" name="title" id="title">

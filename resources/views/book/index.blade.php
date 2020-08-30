@@ -13,7 +13,7 @@
 @section('content')
   @if (Auth::check())
     <div class="booksRegistration">
-      <a href="/book/create">本を登録する</a>
+      <a href="{{ route('create') }}">本を登録する</a>
     </div>
   @endif
   <div class="content">
