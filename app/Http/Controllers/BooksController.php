@@ -36,7 +36,7 @@ class BooksController extends Controller
      */
     public function store(Request $request)
     { 
-        $content = $request->validate();
+        $content = $request->validate($books);
         Book::create($content);
         return redirect()->route(['index']);
     }
