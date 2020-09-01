@@ -6,10 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class book extends Model
 {
-    protected $books= [
+    public static $books= array(
     'user_id' => 'required',
     'title' => 'required',
     'author' => 'required',
     'contents' => 'required',
-    ];
+    );
 }

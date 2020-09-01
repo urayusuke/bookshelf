@@ -23,7 +23,7 @@ class BooksController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
         return view('book.create');
     }
@@ -36,9 +36,9 @@ class BooksController extends Controller
      */
     public function store(Request $request)
     { 
-        $content = $request->validate($books);
+        $content = $this->validate($request,Book::$books);
         Book::create($content);
-        return redirect()->route(['index']);
+        return redirect('/book/index');
     }
 
     /**
