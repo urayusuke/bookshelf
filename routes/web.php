@@ -21,8 +21,9 @@ Route::get('/','BooksController@index');
 
 Auth::routes();
 
-Route::get('/book','BooksController@index');
+Route::get('/book','BooksController@index')->name('index');
 
-Route::get('/book/create','BooksController@create')->name('create');
+Route::get('/book/create','BooksController@create');
 Route::post('/store','BooksController@store')->name('store');
 
+// Route::get('/book/store','BokkController@store');
