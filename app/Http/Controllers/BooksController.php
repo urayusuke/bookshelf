@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Laravel\Ui\Presets\React;
 use App\book;
+use App\User;
+use Illuminate\Support\Facades\Auth;
+
 
 class BooksController extends Controller
 {
@@ -35,11 +38,13 @@ class BooksController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    { 
+    {
+        $id = Auth::id();
         $title = $request->input('title');
         $author = $request->input('author');
         $contents = $request->input('contents');
         Book::create([
+            'user_id' => $id,
             'title' => $title,
             'author' => $author,
             'contents' => $contents
