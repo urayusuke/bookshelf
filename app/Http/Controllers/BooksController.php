@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Laravel\Ui\Presets\React;
 use App\book;
-use App\User;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -16,8 +15,10 @@ class BooksController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        Auth::user();
+        $sort =  $request->sort;
         return view('book.index');
     }
 
