@@ -19,7 +19,9 @@ class BooksController extends Controller
     {
         Auth::user();
         $sort =  $request->sort;
-        return view('book.index');
+        $items = Book::orderBy($sort, 'asc');
+        $param = ['items' => $items, 'sort' => $sort];
+        return view('book.index',$param);
     }
 
     /**
