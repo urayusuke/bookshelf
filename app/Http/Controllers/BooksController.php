@@ -17,11 +17,8 @@ class BooksController extends Controller
      */
     public function index(Request $request)
     {
-        Auth::user();
-        $sort =  $request->sort;
-        $items = Book::orderBy($sort, 'asc');
-        $param = ['items' => $items, 'sort' => $sort];
-        return view('book.index',$param);
+        $user =  Auth::user();
+        return view('book.index');
     }
 
     /**

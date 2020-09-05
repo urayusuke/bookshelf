@@ -5,6 +5,7 @@
     .booksRegistration{text-align: center; font-weight: bold; font-size: 18px;
       letter-spacing: 2px;
     }
+    .li{ width:200px; height: 200px; font-size: 20px;}
   </style>
 </html>
 <body>
@@ -17,9 +18,15 @@
     </div>
   @endif
   <div class="content">
-    <ul>
-      <li></li>
-    </ul>
+      {{-- @foreach($result as $item)
+      <ul>
+        <li>
+          <td>{{$item->title}}</td>
+          <td>{{$item->author}}</td>
+          <td>{{$item->contents}}</td>
+        </li>
+      </ul>
+      @endforeach --}}
   </div>
 @endsection
 
