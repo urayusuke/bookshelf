@@ -18,7 +18,8 @@ class BooksController extends Controller
     public function index(Request $request)
     {
         $user =  Auth::user();
-        return view('book.index');
+        $items = book::all();
+        return view('book.index',['items' => $items]);
     }
 
     /**
