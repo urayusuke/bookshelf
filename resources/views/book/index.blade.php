@@ -5,9 +5,9 @@
     .booksRegistration{text-align: center; font-weight: bold; font-size: 18px;
       letter-spacing: 2px;
     }
-    .content{ display: flex; justify-content: space-around; padding: 10px 100px;}
-    .content__title{ font-size: 20px; width: 20vw; padding: 0px 20px; }
-    .content__author{ font-size: 20px; width: 20vw; }
+    .content{ width: 20vw; display: flex; justify-content: space-around; padding: 20px; margin-left: -5px; }
+    .content__title1{ font-size: 20px; width: 20vw; margin-top: 5px; font-weight: bold; margin-left: -10px; }
+    .content__author1{ font-size: 15px; width: 20vw; margin-top: -5px; margin-left: -10px; }
   </style>
 </html>
 <body>
@@ -22,10 +22,10 @@
   <div class="content">
     @foreach($items as $item)
       <ul>
-        <li class="content__title">
+        <li class="content__title1">
           <td>{{$item->title}}</td>
         </li>
-        <li class="content__author">
+        <li class="content__author1">
           <td>{{$item->author}}</td>
         </li>
       </ul>

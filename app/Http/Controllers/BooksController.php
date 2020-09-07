@@ -18,7 +18,8 @@ class BooksController extends Controller
     public function index(Request $request)
     {
         $user =  Auth::user();
-        $items = book::all();
+        $items = Book::select('title','author')->simplePaginate(5);
+        // $items = book::all();
         return view('book.index',['items' => $items]);
     }
 
