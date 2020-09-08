@@ -26,4 +26,6 @@ Route::get('/book','BooksController@index')->name('index');
 Route::get('/book/create','BooksController@create');
 Route::post('/store','BooksController@store')->name('store');
 
+Route::get('/book/{id}','BooksController@show')->name('show');
+
 // Route::get('/book/store','BokkController@store');

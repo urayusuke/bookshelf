@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Laravel\Ui\Presets\React;
-use App\book;
 use Illuminate\Support\Facades\Auth;
+use App\Book;
 
 
 class BooksController extends Controller
@@ -18,9 +18,15 @@ class BooksController extends Controller
     public function index(Request $request)
     {
         $user =  Auth::user();
-        $items = Book::select('title','author')->simplePaginate(5);
-        // $items = book::all();
-        return view('book.index',['items' => $items]);
+        // $items = Book::select('id','title','author')->simplePaginate(5);
+        // $sort = $request->sort;
+        if(!$request->sort) {
+            $sort = 'id';
+        } else {
+            $sort = $request->sort;
+        }
+        $items = Book::orderBy($sort,'asc')->simplePaginate(5);
+        return view('book.index',['items' => $items, 'sort' => $sort]);
     }
 
     /**
@@ -60,9 +66,11 @@ class BooksController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request)
     {
-        //
+        $post = Book::find('id');
+        $items = Book::all();
+        return view('book.show',['items' => $items, 'post' => $post]);
     }
 
     /**
