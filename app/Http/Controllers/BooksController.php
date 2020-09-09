@@ -66,11 +66,10 @@ class BooksController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Request $request)
-    {
-        $post = Book::find('id');
-        $items = Book::all();
-        return view('book.show',['items' => $items, 'post' => $post]);
+    public function show(int $id)
+    { 
+        $item = Book::findOrFail($id);
+        return view('book.show',['item' => $item]);
     }
 
     /**
@@ -79,9 +78,10 @@ class BooksController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(int $id)
     {
-        //
+        $item = Book::findOrFail($id);
+        return view('book.edit',['item' => $item]);
     }
 
     /**
@@ -91,9 +91,14 @@ class BooksController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request,int $id)
     {
-        //
+        $item = Book::findOrFail($id);
+        $item->title = $request->title;
+        $item->author = $request->author;
+        $item->contents = $request->contents;
+        $item->save();
+        return redirect($id);
     }
 
     /**
@@ -102,8 +107,10 @@ class BooksController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(int $id)
     {
-        //
+        $item = Book::findOrFail($id);
+        $item->delete();
+        return redirect()->route('index');
     }
 }

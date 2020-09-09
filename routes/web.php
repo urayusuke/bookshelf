@@ -26,6 +26,9 @@ Route::get('/book','BooksController@index')->name('index');
 Route::get('/book/create','BooksController@create');
 Route::post('/store','BooksController@store')->name('store');
 
-Route::get('/book/{id}','BooksController@show')->name('show');
+Route::get('/{id}','BooksController@show')->where('id', '[0-9]+')->name('show');
 
-// Route::get('/book/store','BokkController@store');
+Route::get('/book/edit/{id}','BooksController@edit')->where('id', '[0-9]+');
+Route::post('/book/edit/{id}','BooksController@update')->name('update');
+
+Route::post('/','BooksController@destroy')->name('destroy');

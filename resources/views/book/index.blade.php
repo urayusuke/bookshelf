@@ -25,7 +25,7 @@
   <div class="content">
     @foreach($items as $item)
       <ul>
-        <a href="{{ url('/book/{id}') }}">
+        <a href="{{ $item->id }}">
           <li class="content__title1">
             <td>{{$item->title}}</td>
           </li>

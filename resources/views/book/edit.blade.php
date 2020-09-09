@@ -10,7 +10,8 @@
   p{font-size: 20px; font-weight: bold; padding-bottom: 2px;}
   #title{ margin-bottom: 10px; width: 500px; font-size: 20px; margin: 0 auto;}
   #author{ margin-bottom: 10px; width: 500px; font-size: 20px; margin: 0 auto;}
-  #content{ margin: 0 auto; text-align: center; display: flex; justify-content: center;
+  #content{ background-color: white; border: solid 1px black;
+    margin: 0 auto; text-align: center; 
     margin-bottom: 10px; width: 500px; height: 200px; text-align: start;
     padding-left: 5px; padding-right:5px; font-size: 20px; }
   #btn{ padding: 5px 20px; font-size: 20px; letter-spacing: 2px;}
@@ -21,16 +22,16 @@
     <h2>本の内容</h2>
   </div>
   <div class="show">
-    {{-- <p>{{ $item->id }}</p> --}}
-    <p>タイトル</p>
-      <p id="title">{{ $item->title }}</p>
-    <br><p>著 者</p>
-      <p id="author">{{ $item->author}}</p>
-    <br><p>内 容</p>
-      <p id="content">{{$item->contents}}</p>
     @if (Auth::id() == $item->user_id)
-      <br><a href="{{ url('/book/edit/'.$item->id)}}" id="btn">編 集</a>
-      <a href="{{ route('destroy',$item)}}" method="post">削 除</a>
+      <form action="{{ route('update',$item) }}" method="post">
+        <table>
+          @csrf
+          <p>タイトル</p><input type="text" name="title" id="title" value="{{ $item->title }}">
+          <br><p>著 者</p><input type="text" name="author" id="author" value="{{ $item->author}}">
+          <br><p>内 容</p><textarea id="content" name="contents" placeholder="本の内容を記載して下さい">{{ $item->contents }}</textarea>
+          <br><input type="submit" id="btn" value="更 新">
+        </table>
+      </form>
     @endif
   </div>
 @endsection

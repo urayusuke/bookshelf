@@ -27,7 +27,7 @@
         <p>タイトル</p><input type="text" name="title" id="title">
         <br><p>著 者</p><input type="text" name="author" id="author">
         <br><p>内 容</p><textarea id="content" name="contents" placeholder="本の内容を記載してください"></textarea>
-        <br><input type="submit" id="btn" value="登録する">
+        <br><input type="submit" id="btn" value="登 録">
       </table>
     </form>
   </div>
