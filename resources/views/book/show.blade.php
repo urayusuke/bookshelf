@@ -30,7 +30,11 @@
       <p id="content">{{$item->contents}}</p>
     @if (Auth::id() == $item->user_id)
       <br><a href="{{ url('/book/edit/'.$item->id)}}" id="btn">編 集</a>
-      <a href="{{ route('destroy',$item)}}" method="post">削 除</a>
+      <form action="{{ route('destroy') }}" method="post">
+        {{ csrf_field() }}
+        {{-- <a href="{{ route('destroy') }}">削 除</a> --}}
+        <input type="submit" value="削 除" >
+      </form>
     @endif
   </div>
 @endsection
