@@ -31,4 +31,4 @@ Route::get('/{id}','BooksController@show')->where('id', '[0-9]+')->name('show');
 Route::get('/book/edit/{id}','BooksController@edit')->where('id', '[0-9]+');
 Route::post('/book/edit/{id}','BooksController@update')->name('update');
 
-Route::post('/','BooksController@destroy')->name('destroy');
+Route::delete('/{id}','BooksController@destroy')->where('id', '[0-9]+')->name('destroy');

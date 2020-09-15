@@ -3,16 +3,16 @@
 <style>
   .register{ font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN';
     text-align: center; background-color: burlywood;  
-    margin-top:-30px; margin-bottom: 25px; 
+    margin-top:-30px; margin-bottom: 20px; 
     padding-top: 5px; font-weight: bold;}
   h2{letter-spacing: 10px;}
   .show{ margin-top: -2px; text-align: center; letter-spacing: 10px;}
   p{font-size: 20px; font-weight: bold; padding-bottom: 2px;}
-  #title{ margin-bottom: 10px; width: 500px; font-size: 20px; margin: 0 auto;}
-  #author{ margin-bottom: 10px; width: 500px; font-size: 20px; margin: 0 auto;}
+  #title{ margin-bottom: 10px; width: 500px; font-size: 20px; margin: 0 auto; margin-bottom: 10px;}
+  #author{ margin-bottom: 10px; width: 500px; font-size: 20px; margin: 0 auto; margin-bottom: 10px;}
   #content{ background-color: white; border: solid 1px black;
     margin: 0 auto; text-align: center; 
-    margin-bottom: 10px; width: 500px; height: 200px; text-align: start;
+    margin-bottom: 10px; width: 500px; height: 300px; text-align: start;
     padding-left: 5px; padding-right:5px; font-size: 20px; }
   #btn{ padding: 5px 20px; font-size: 20px; letter-spacing: 2px;}
 </style>
