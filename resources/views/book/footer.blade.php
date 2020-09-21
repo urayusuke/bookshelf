@@ -1,5 +1,5 @@
 <html>
-  <link href="{{ asset('/scss/book/index.scss') }}" rel="stylesheet">
+  <link href="{{ mix('/scss/book/index.scss') }}" rel="stylesheet">
 <body>
   <div class="footer">
     <a href="{{ url('/') }}">
