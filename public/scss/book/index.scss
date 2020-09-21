@@ -5,6 +5,7 @@ html, body {
   font-weight: 200;
   height: 100vh;
   margin: 0;
+  overflow:hidden;
 }
 
 .full-height {
@@ -51,24 +52,24 @@ html, body {
   margin-bottom: 30px;
 }
 
-.content{
-  width: 100vw;
-  height: 70vh;
-}
+// .content{
+//   width: 100vw;
+//   height: 70vh;
+// }
 
 li{
   list-style: none;
 }
 
-.footer{
-  background-color: gray;
-  box-shadow: 0 10px 12px 0 black;
-  color: white;
-  width: 100vw;
-  height: 9vh;
-  position: absolute;
-  bottom: 0;
-}
+// .footer{
+//   background-color: gray;
+//   box-shadow: 0 10px 12px 0 black;
+//   color: white;
+//   width: 100vw;
+//   height: 9vh;
+//   position: absolute;
+//   bottom: 0;
+// }
 
 h3{
   position: absolute;
