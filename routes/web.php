@@ -13,7 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/','BooksController@index')->name('top');
+Route::get('/',function(){
+  return view('welcome');
+});
 
 Auth::routes();
 

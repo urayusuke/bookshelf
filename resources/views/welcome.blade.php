@@ -61,10 +61,18 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            .content__bar{ 
+                font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN';
+                text-align: center; background-color: burlywood;  
+                margin-top:-30px; margin-bottom: 25px; 
+                padding-top: 5px; font-weight: bold;
+                } 
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+        @extends('layouts.app')
+        {{-- <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -77,9 +85,14 @@
                         @endif
                     @endauth
                 </div>
-            @endif
+            @endif --}}
 
-            <div class="content">
+        @section('content')
+            <div class="content__bar">
+                <h2>本を登録するには、ログインが必要です</h2>
+            </div>
+        @endsection
+            {{-- <div class="content">
                 <div class="title m-b-md">
                     Laravel
                 </div>
@@ -95,6 +108,7 @@
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
             </div>
-        </div>
+        </div> --}}
+        @include('book.footer')
     </body>
 </html>
