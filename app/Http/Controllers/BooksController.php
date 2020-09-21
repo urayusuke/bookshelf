@@ -17,9 +17,7 @@ class BooksController extends Controller
      */
     public function index(Request $request)
     {
-        $user =  Auth::user();
-        // $items = Book::select('id','title','author')->simplePaginate(5);
-        // $sort = $request->sort;
+        // $user =  Auth::user();
         if(!$request->sort) {
             $sort = 'id';
         } else {
