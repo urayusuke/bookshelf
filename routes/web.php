@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/','BooksController@index');
+Route::get('/book/index','BooksController@index');
 
 Auth::routes();
 
