@@ -17,7 +17,6 @@ class BooksController extends Controller
      */
     public function index(Request $request)
     {
-        // $user =  Auth::user();
         if(!$request->sort) {
             $sort = 'id';
         } else {
