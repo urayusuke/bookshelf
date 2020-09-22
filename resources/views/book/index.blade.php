@@ -1,7 +1,7 @@
 <html>
   <head>@yield('title')</head>
   <link href="{{ asset('/scss/book/index.scss') }}" rel="stylesheet">
-  <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+  <link rel="stylesheet" href="{{ mix('/scss/book/index.scss') }}">
   <style>
     .booksRegistration{display: flex; justify-content: center; font-weight: bold; font-size: 30px;
       letter-spacing: 2px; background-color: burlywood; width: 15vw; margin: 0 auto;  margin-top: 30px; 
