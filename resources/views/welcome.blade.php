@@ -76,6 +76,9 @@
             h3{
                 position: absolute; top: 15px; left: 46vw;
             }
+            .booksRegistration{display: flex; justify-content: center; font-weight: bold; font-size: 30px;
+                letter-spacing: 2px; background-color: burlywood; width: 15vw; margin: 0 auto;  margin-top: 30px; 
+            }
         </style>
     </head>
     <body>
@@ -99,6 +102,11 @@
             <div class="content__bar">
                 <h2>本を登録するには、ログインが必要です</h2>
             </div>
+            @if (Auth::check())
+            <div class="booksRegistration">
+                <a href="{{ url('/book/create') }}" class="booksRegistration__a">本を登録する</a>
+            </div>
+            @endif
         @endsection
             {{-- <div class="content">
                 <div class="title m-b-md">

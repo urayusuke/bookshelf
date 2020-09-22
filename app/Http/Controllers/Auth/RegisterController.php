@@ -73,7 +73,7 @@ class RegisterController extends Controller
 
     public function redirectPath()
     {
-        return 'book';
+        return '/';
     }
     
 }
