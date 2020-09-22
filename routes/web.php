@@ -13,16 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',function(){
-  return view('welcome');
-});
+// Route::get('/',function(){
+//   return view('welcome');
+// });
 
 Auth::routes();
 
-Route::get('/book','BooksController@index')->name('index');
+Route::get('/','BooksController@index')->name('index');
 
 Route::get('/book/create','BooksController@create');
-Route::post('/book/index','BooksController@store')->name('store');
+Route::post('/','BooksController@store')->name('store');
 
 Route::get('/{id}','BooksController@show')->where('id', '[0-9]+')->name('show');
 
