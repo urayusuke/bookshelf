@@ -22,7 +22,7 @@ Auth::routes();
 Route::get('/book','BooksController@index')->name('index');
 
 Route::get('/book/create','BooksController@create');
-Route::post('/store','BooksController@store')->name('store');
+Route::post('/','BooksController@store')->name('store');
 
 Route::get('/{id}','BooksController@show')->where('id', '[0-9]+')->name('show');
 
