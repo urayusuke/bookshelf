@@ -13,7 +13,7 @@
   </style>
 <body>
   <div class="footer">
-    <a href="{{ route('index') }}" class="footer__title">
+    <a href="{{ url('/') }}" class="footer__title">
     <h3>bookshelf</h3>
     </a>
   </div>
