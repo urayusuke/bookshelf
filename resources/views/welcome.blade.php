@@ -99,14 +99,15 @@
             @endif --}}
 
         @section('content')
-            <div class="content__bar">
-                <h2>本を登録するには、ログインが必要です</h2>
-            </div>
             @if (Auth::check())
             <div class="booksRegistration">
                 <a href="{{ url('/book/create') }}" class="booksRegistration__a">本を登録する</a>
             </div>
-            @endif
+            @else
+            <div class="content__bar">
+                <h2>本を登録するには、ログインが必要です</h2>
+            </div>
+            @endif 
         @endsection
             {{-- <div class="content">
                 <div class="title m-b-md">
