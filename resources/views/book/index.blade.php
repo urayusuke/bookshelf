@@ -20,6 +20,14 @@
     .content__link{color: black;}
     .booksRegistration__a{color: black;}
     .content__list{ width: 19.8vw; padding: 0 5px;}
+    .footer{
+      background-color: gray; color: white;
+      width: 100vw; height: 9vh;  position: absolute; bottom: 0;
+      }
+    .footer__title{color: wheat;}
+    h3{
+      position: absolute; top: 15px; left: 46vw;
+    }
   </style>
 </html>
 <body>

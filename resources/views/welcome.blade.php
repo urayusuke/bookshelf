@@ -109,6 +109,10 @@
                 </div>
             </div>
         </div> --}}
-        @include('book.footer')
+    <div class="footer">
+        <a href="{{ route('index') }}" class="footer__title">
+        <h3>bookshelf</h3>
+        </a>
+    </div>
     </body>
 </html>
