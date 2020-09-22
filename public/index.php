@@ -61,4 +61,3 @@ $kernel->terminate($request, $response);
 
 SassCompiler::run("scss/", "css/");
 
-include_once("index.html");
