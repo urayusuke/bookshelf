@@ -20,6 +20,7 @@
     .content__link{color: black;}
     .booksRegistration__a{color: black;}
     .content__list{ width: 19.8vw; padding: 0 5px;}
+    .content__not{color: black; font-size: 25px; text-align: center; margin-top: 100px; font-weight: bold;}
   </style>
 </html>
 <body>
@@ -31,21 +32,25 @@
       <a href="{{ url('/book/create') }}" class="booksRegistration__a">本を登録する</a>
     </div>
   @endif
-  <div class="content">
-    @foreach($items as $item)
-      <ul class="content__list">
-        <a href="{{ $item->id }}" class="content__link">
-          <li class="content__title1">
-            <td>{{$item->title}}</td>
-          </li>
-          <li class="content__author1">
-            <td>{{$item->author}}</td>
-          </li>
-        </a>
-      </ul>
-      @endforeach
-    </div>
-  {{ $items->appends(['sort' => $sort])->links() }}
+  @if(count($items)===0)
+    <p class="content__not">現在、登録されている本はございません</p>
+  @else
+    <div class="content">
+      @foreach($items as $item)
+        <ul class="content__list">
+          <a href="{{ $item->id }}" class="content__link">
+            <li class="content__title1">
+              <td>{{$item->title}}</td>
+            </li>
+            <li class="content__author1">
+              <td>{{$item->author}}</td>
+            </li>
+          </a>
+        </ul>
+        @endforeach
+      </div>
+    {{ $items->appends(['sort' => $sort])->links() }}
+  @endif
 @endsection
 
 @include('book.footer')
