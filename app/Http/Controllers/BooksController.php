@@ -23,7 +23,7 @@ class BooksController extends Controller
             $sort = $request->sort;
         }
         $items = Book::orderBy($sort,'asc')->simplePaginate(5);
-        if(Book::all()===0){
+        if(count($items)===null){
             return view('book.index');
         }else{
             return view('book.index',['items' => $items, 'sort' => $sort]);
