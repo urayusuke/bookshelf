@@ -32,11 +32,11 @@
       <a href="{{ url('/book/create') }}" class="booksRegistration__a">本を登録する</a>
     </div>
   @endif
-  @if(count($items ?? '')===0)
+  @if(count($items)===0)
     <p class="content__not">現在、登録されている本はございません</p>
   @else
     <div class="content">
-      @foreach($items ?? '' as $item)
+      @foreach($items as $item)
         <ul class="content__list">
           <a href="{{ $item->id }}" class="content__link">
             <li class="content__title1">
@@ -49,7 +49,7 @@
         </ul>
         @endforeach
       </div>
-    {{ $items ?? ''->appends(['sort' => $sort])->links() }}
+    {{ $items->appends(['sort' => $sort])->links() }}
   @endif
 @endsection
 
