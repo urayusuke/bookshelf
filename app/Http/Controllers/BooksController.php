@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Laravel\Ui\Presets\React;
 use Illuminate\Support\Facades\Auth;
-use app\Book;
+use App\Book;
 
 
 class BooksController extends Controller
