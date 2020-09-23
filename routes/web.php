@@ -13,13 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',function(){
-  return view('welcome');
-});
+// Route::get('/',function(){
+//   return view('welcome');
+// });
 
 Auth::routes();
 
-Route::get('/book','BooksController@index')->name('index');
+Route::get('/','BooksController@index')->name('index');
 
 Route::get('/book/create','BooksController@create');
 Route::post('/book','BooksController@store')->name('store');
