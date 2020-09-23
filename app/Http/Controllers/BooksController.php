@@ -22,17 +22,8 @@ class BooksController extends Controller
         } else {
             $sort = $request->sort;
         }
-
-        if($request!==0){
-            $items = Book::orderBy($sort,'asc')->simplePaginate(5);
-        } else {
-            $items = 0;
-        }
-        // if(count($items)===0){
-            // return view('book.index');
-        // }else{
+        $items = Book::orderBy($sort,'asc')->simplePaginate(5);
         return view('book.index',['items' => $items, 'sort' => $sort]);
-        // }
     }
 
     /**
