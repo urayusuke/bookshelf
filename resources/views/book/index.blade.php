@@ -32,7 +32,7 @@
       <a href="{{ url('/book/create') }}" class="booksRegistration__a">本を登録する</a>
     </div>
   @endif
-  @if(count($items)===0)
+  @if($items===0)
     <p class="content__not">現在、登録されている本はございません</p>
   @else
     <div class="content">
